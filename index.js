@@ -1,12 +1,14 @@
-export function sum(a,b){
-    return a+b;
+export function calculate(symbol,a,b){
+    switch(symbol){
+        case '+':
+            return a+b;
+        case '-':
+            return a-b;
+        case '*':
+            return a*b;
+        case '/':
+            return a/b;
+        default:
+             return 0;
     }
-    export function minus(a,b){
-        return a-b;
-    }
-   export function multiply(a,b){
-        return a*b;
-    }  
-   export function divide(a,b){
-        return a/b;
-    }
+}
