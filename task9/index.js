@@ -1,12 +1,12 @@
 export function vowelCount(str){
-  let count=0;
-  const vowels=/[aeiou]/gi;
-  for(let i=0;i<str.length;i++){
-    if(str[i]==str[i].toUpperCase){
-      str=str[i].toLowerCase;
+  if(str!=null){
+    for(let i=0;i<str.length;i++){
+      if(str[i]!=str[i].toUpperCase()){      
+  const vowels=/[aeiou]/g;
+  const checkVowels=str.match(vowels);
+  return checkVowels!=null?checkVowels.length:0;
+      }
+      return 0;
     }
   }
-  const checkVowels=str.match(vowels)
-  return checkVowels!=null?checkVowels.length:0
-
 }
