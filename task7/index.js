@@ -1,16 +1,14 @@
 export function swapCase(str){
-    let result='';
-    let numbersInStr=str.match(/\d+/g);
-    if(numbersInStr!=null){
-      for(let i=0;i<numbersInStr.length;i++){
-        return numbersInStr[i];
-      }
-    }
-    for(let i=0;i<str.length;i++){
+  if(str!=null){
+    let strAfterSwap='';
+    const regexp=/\d+\w+/g;
+    const numbers=str.match(regexp); 
+    for(let i=0;i<str.length;i++){   
       if(str[i]==str[i].toUpperCase())
-        result+=str[i].toLowerCase();
+        strAfterSwap+=str[i].toLowerCase();
         else
-        result+=str[i].toUpperCase();       
+        strAfterSwap+=str[i].toUpperCase();       
       }
-      return result;
+      return strAfterSwap;
+    }
 }
