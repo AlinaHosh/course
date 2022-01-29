@@ -26,4 +26,3 @@ test('should return "no letter in word" that merged with "wonderful" till the le
         const result3=stringMerge('wonderful','people','a')
         expect(result3).toBe('no letter in word')
     });
-
