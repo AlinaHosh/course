@@ -4,10 +4,10 @@ export function getTime(str){
         const matches=str.match(regexp);       
         if(matches!=null){
             for(let i=0;i<matches.length;i++){
-                let hour=matches[i].slice(0,2);
-                let minute=matches[i].slice(3);
-                let hourInNum=Number(hour);
-                let minuteInNum=Number(minute);
+                const hour=matches[i].slice(0,2);
+                const minute=matches[i].slice(3);
+                const hourInNum=Number(hour);
+                const minuteInNum=Number(minute);
                 if(hourInNum<24 && minuteInNum<60){
                    return hour+':'+minute;
                 }
