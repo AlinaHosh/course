@@ -1,14 +1,15 @@
-export let openOrSenior=function(pairs){
+export const openOrSenior=pairs=>{
   const person=[];
-  const pairsToStr=pairs.join(' ');
-  const regexp=/\d+[,]\d+/g;
-  const matches=pairsToStr.match(regexp);
-  for(let i=0;i<matches.length;i++){
-    const matches1=matches[i].split(',');  
-      if(matches1[0]>=40 && matches1[1]>=15){
-        person.push("Senior");
-      }
-      person.push("Open");
+  const agePerson=40;
+  const ageSkill=15;
+
+  pairs.forEach((pair)=>{
+    if(pair[0]>=agePerson && pair[1]>=ageSkill){
+      person.push('Senior');
+    }else{
+      person.push('Open');
     }
- return person;
- };
+  });
+
+  return person;
+};
